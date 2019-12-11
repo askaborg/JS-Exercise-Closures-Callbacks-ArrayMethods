@@ -48,8 +48,9 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
+function processLength(/* CODE HERE */ list, callback) {
   /* CODE HERE */
+  return callback(list.length)
 }
 
 /**
@@ -66,8 +67,9 @@ function processLength(/* CODE HERE */) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
+function processLastItem(/* CODE HERE */ stringList, callback) {
   /* CODE HERE */
+  return callback(stringList.pop())
 }
 
 /**
@@ -87,8 +89,15 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum(/* CODE HERE */ numberList, callback) {
   /* CODE HERE */
+  let sum = 0;
+  if (numberList.length > 0) {
+    return callback(numberList.reduce((a, b) => a + b));
+  }
+  else{
+    return callback(0);
+  }
 }
 
 /**
@@ -109,8 +118,9 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
+function processProduct(/* CODE HERE */ num1, num2, callback) {
   /* CODE HERE */
+  return callback(num1 * num2)
 }
 
 /**
@@ -133,8 +143,9 @@ function processProduct(/* CODE HERE */) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
+function processContains(/* CODE HERE */ ) {
   /* CODE HERE */
+
 }
 
 /**
